@@ -268,7 +268,7 @@ async function openPrayerCard() {
     today.toLocaleDateString("en-US", {weekday:"long", day:"numeric", month:"long", year:"numeric"});
 
   try {
-    const url = `https://api.aladhan.com/v1/timings/${dd}-${mm}-${yyyy}?latitude=${lat}&longitude=${lon}&method=1`;
+    const url = `https://api.aladhan.com/v1/timings/${dd}-${mm}-${yyyy}?latitude=${lat}&longitude=${lon}&method=1&school=1`;
     const r = await fetch(url);
     const d = await r.json();
 
